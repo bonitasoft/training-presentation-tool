@@ -46,14 +46,17 @@ html {
 /* SECTION 3: Set body font face, size, and color.
    Consider using a serif font for readability. */
 body, p, td, li, div {
-
+	background-color: white;
+	color: black;
 }
 
 /* SECTION 4: Set heading font face, sizes, and color.
    Differentiate your headings from your body text.
    Perhaps use a large sans-serif for distinction. */
 h1,h2,h3,h4,h5,h6 {
-	text-shadow: 0 0 0 #000 !important;
+	text-shadow: none;
+	background-color: white;
+	color: black;
 }
 
 .reveal pre code {
