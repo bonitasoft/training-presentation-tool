@@ -47,16 +47,12 @@
 				<h2>Business Process Application Developer</h2>
 				<p>If you see this page you get the Reveal.js tool with Bonita look and feel. To build a version of the training material:</p>
 				<ul>
-					<li>Get a tagged version of the content (index.html + images) from Subversion (e.g. version 7.0.0.0 of BPAD)</li>
-					<li>Clone the <a href="https://github.com/bonitasoft/training-presentation-tool.git">training presentation tool</a> Git repository</li>
-					<li>Copy and overwrite <code>index.html</code> and <code>images/*</code> in <code>reveal.js</code> folder</li>
-					<li>Go to <code>reveal.js</code> folder and run <code>grunt zip</code></li>
-					<li>Rename <code>reveal-js-presentation.zip</code> to <code>BPAD-7.0.0.0-presentation.zip</code></li>
+					<li>Get a tagged version of the training content from Subversion (e.g. <code>svn export https://service.svn.bonitasoft.org/training/materials/tags/BPAD-en-7.0-1.0.0</code>)</li>
+					<li>Go to <code>sources</code> folder and run <code>mvn -Dtranslation=us-EN clean install</code></li>
+					<li>Get the files from <code>dist/target</code> folder</li>
 				</ul>
 			</section>
-			
 		</div>
-
 	</div>
 
 	<script src="lib/js/head.min.js"></script>
