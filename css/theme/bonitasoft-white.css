@@ -1,26 +1,120 @@
 /**
- * Bonitasoft theme for reveal.js. Based on the black theme.
+ * Bonitasoft white theme for reveal.js.
+ * Design to work with prensentation generated from AscciDoctor sources.
  *
- * Copyright (C) 2016 Bonitasoft Antoine Mottier
+ * Copyright (C) 2016 Bonitasoft Philippe Ozil - Antoine Mottier
  */
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #222; }
+  color: #0C334E; }
 
 /** Custom var Bonitasoft */
+/** Color for top red line */
 /** Custom Style Bonitasoft */
+/* Top red line & text color */
+.reveal {
+  border-top-width: 10px;
+  border-top-style: solid;
+  border-top-color: #E31837; }
+
+/* For element with .bonita-red class */
+.reveal .bonita-red {
+  color: #E31837; }
+
+/* Images without borders and transparent background */
+.reveal section img {
+  border-width: 0;
+  background-color: transparent;
+  box-shadow: none; }
+
 img.width30 {
   width: 30%; }
 
 img.width50 {
   width: 50%; }
 
+/* Presentation cover page */
+/* Title style */
+.reveal > .slides > section:first-child h1 {
+  padding: 100px 0;
+  margin: 0;
+  border-bottom: 3px solid red;
+  width: 100%;
+  background: -moz-linear-gradient(top, transparent 0%, rgba(151, 151, 151, 0) 75%, rgba(201, 201, 201, 0.65) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(75%, rgba(151, 151, 151, 0)), color-stop(100%, rgba(201, 201, 201, 0.65)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(151, 151, 151, 0) 75%, rgba(201, 201, 201, 0.65) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(151, 151, 151, 0) 75%, rgba(201, 201, 201, 0.65) 100%);
+  background: -ms-linear-gradient(top, transparent 0%, rgba(151, 151, 151, 0) 75%, rgba(201, 201, 201, 0.65) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(151, 151, 151, 0) 75%, rgba(201, 201, 201, 0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6c9c9c9',GradientType=0 );
+  font-size: 1.6em;
+  text-transform: uppercase; }
+
+.reveal > .slides > section:first-child > p {
+  padding: 20px 0;
+  margin: 0 20px;
+  background: url("../../images/logo_with_text.png") no-repeat right center;
+  color: #E31837; }
+
+/* Author style */
+.reveal > .slides > section:first-child > p > small {
+  text-align: left;
+  font-size: 38px; }
+
+/* Presentation end page */
+/* Thanks for your attention style */
+.reveal > .slides > section:last-child h2 {
+  background: url("../../images/logo_without_text.png") no-repeat center top;
+  margin: 0;
+  padding-top: 130px;
+  text-transform: uppercase; }
+
+/* Question don't hesitate style */
+.reveal > .slides > section:last-child > div.paragraph:first-of-type > p {
+  margin: 1em 0;
+  text-align: center;
+  color: #E31837; }
+
 .reveal .slides {
-  text-align: left; }
+  border-top-color: #E31837; }
   .reveal .slides h1, .reveal .slides h2, .reveal .slides h3, .reveal .slides h4, .reveal .slides h5, .reveal .slides h6 {
+    margin: 0 0 20px 0;
+    color: #0C334E;
     text-align: center;
     text-transform: none; }
 
+::selection {
+  color: #fff;
+  background: #0C334E;
+  text-shadow: none; }
+
+.reveal .slides > section, .reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/* Paragraphs with left-aligned text */
+.reveal section p {
+  text-align: left; }
+
+/* Images without borders and transparent background */
+.reveal section img {
+  border-width: 0;
+  background-color: transparent;
+  box-shadow: none; }
+
+/* Any element without margins */
+.reveal .no-margin {
+  margin: 0 !important; }
+
+/* Any element including tables without borders */
+.reveal .no-border, table.no-border td {
+  border-width: 0 !important; }
+
+/* Lists without bullets */
+.reveal section ul.no-bullet {
+  list-style-type: none; }
+
+/* To display text on 2 columns */
 div.multicolumn1 {
   -moz-column-count: 2;
   -moz-column-gap: 50%;
@@ -29,30 +123,26 @@ div.multicolumn1 {
   column-count: 3;
   column-gap: 50%; }
 
-.reveal code {
-  font-family: monospace;
-  font-size: 30px;
-  color: #bbb; }
-
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #222;
-  background-image: url("../../images/logo-bonitasoft.png");
-  background-position: right top;
+  background: #fff;
+  background-image: url("../../images/logo_watermark.png");
+  background-size: 150px 130px;
+  background-position: left bottom;
   background-repeat: no-repeat;
-  background-color: #222; }
+  background-color: #fff; }
 
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 38px;
   font-weight: normal;
-  color: #fff; }
+  color: #0C334E; }
 
 ::selection {
   color: #fff;
-  background: #bee4fd;
+  background: #0C334E;
   text-shadow: none; }
 
 .reveal .slides > section,
@@ -70,7 +160,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
+  color: #0C334E;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
@@ -234,20 +324,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #42affa;
+  color: #FF3030;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #8dcffc;
+  color: #FF0000;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #068de9; }
+  background: #e30000; }
 
 /*********************************************
  * IMAGES
@@ -255,7 +345,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
+  border: 4px solid #0C334E;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
@@ -269,7 +359,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #42affa;
+  border-color: #FF3030;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -277,31 +367,31 @@ body {
  *********************************************/
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-left.enabled {
-  border-right-color: #42affa; }
+  border-right-color: #FF3030; }
 
 .reveal .controls .navigate-right,
 .reveal .controls .navigate-right.enabled {
-  border-left-color: #42affa; }
+  border-left-color: #FF3030; }
 
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-up.enabled {
-  border-bottom-color: #42affa; }
+  border-bottom-color: #FF3030; }
 
 .reveal .controls .navigate-down,
 .reveal .controls .navigate-down.enabled {
-  border-top-color: #42affa; }
+  border-top-color: #FF3030; }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #8dcffc; }
+  border-right-color: #FF0000; }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #8dcffc; }
+  border-left-color: #FF0000; }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #8dcffc; }
+  border-bottom-color: #FF0000; }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #8dcffc; }
+  border-top-color: #FF0000; }
 
 /*********************************************
  * PROGRESS BAR
@@ -310,7 +400,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #42affa;
+  background: #FF3030;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
